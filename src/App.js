@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Sky from 'react-sky';
 import "./style.css";
 
 export default function App() {
+  const [size, setSize] = useState(15);
+  useEffect(() => {
+    setSize(Math.random() * (50 - 10) + 10);
+  }, []);
+
   return (
     <div>
         <Sky
@@ -12,7 +17,7 @@ export default function App() {
           }}
           how={10} /* Pass the number of images Sky will render chosing randomly */
           time={40} /* time of animation */
-          size={'100px'} /* size of the rendered images */
+          size={`${size}px`} /* size of the rendered images */
         />
       </div>
   );
