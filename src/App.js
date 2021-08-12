@@ -19,6 +19,13 @@ export default function App() {
           time={40} /* time of animation */
           size={`${size}px`} /* size of the rendered images */
         />
+
+        <div className='block'></div>
+        <div className='block'></div>
+        <div className='block'></div>
+        <div className='block'></div>
+        <div className='block'></div>
+        <div className='block'></div>
       </div>
   );
 }
